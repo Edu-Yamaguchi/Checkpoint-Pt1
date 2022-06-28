@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #303030;
+}
+/* Logo adventure time */
+.main-header img{
+    width: 160px;
+    height: 120px;
+}
+.main-header{
+    padding: 0px 124px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303030;
+}
+.main-header ul{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    height: 50px;
+}
+.main-header ul a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(86, 86, 86);
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 24px;
+    transition:.5s ease-out;
+}
+.main-header a:hover{
+    color: rgb(209, 44, 44);
+}
+/* Background de fundo (Casa na árvore) */
+.banner{
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/c9/03/70/c90370d1b0be99b2b00058983564f4cc.jpg);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    text-align: center;
+    color: rgb(209, 44, 44);
+    font-size: 52px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: -12px;
+}
+/* Cards sobre os reinos */
+.fire{
+    color: rgb(209, 44, 44);
+}
+.ice{
+    color: deepskyblue;
+}
+.candy{
+    color: deeppink;
+}
+.Cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+.Cards p{
+    color: white;
+    width: 450px;
+    margin-top: 24px;
+    text-align: justify;
+
+}
+.Cards div{
+    width: 30%;
+    height: fit-content;
+    width: fit-content;
+    padding: 32px 12px;
+}
+.Cards img{
+    height: 350px;
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px black;
+    transition: .5s; 
+}
+.Cards img:hover{
+    transform: scale(1.05);
+}
+.Cards h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 12px;
+}
+/* Vídeo */
+.containervideo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 72px 0px;
+}
+.containervideo iframe{
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px black;
+}
+.containervideo h1{
+    margin-bottom: 12px;
+}
+/* Rodapé da página */
+.mainfooter{
+    position: relative;
+    bottom: 0;
+    background-color: #202020;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+}
+.mainfooter img:hover{
+    transform: scale(1.1);
+}
+.mainfooter img{
+    width: 50px;
+    height: 50px;
+    transition: .5s ease-out;
+}
+.mainfooter p{
+    color: white;
+    text-align: center;
+}
+/* Resolução para notebook */
+@media (max-width: 1440px){
+    .Cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .containervideo iframe{
+       width: 700px;
+    }
+}
+/* Tamanho do vídeo colocado para não dar problema e alteração de layout no Header para suporte mobile*/
+@media (max-width: 800px){ 
+    .main-header{
+        flex-direction: column;
+    }
+    .main-header ul{
+        margin-bottom: 150px;
+        flex-direction: column;
+    }
+    .containervideo iframe{
+        width: 400px;
+        height: 200px;
+    }
+}
+/* Resolução de tela para até 425px e ajustes de imagens */
+@media (max-width: 600px) {
+    .banner{
+        background-image: none;
+        height: 0;
+        margin: 0;
+    }
+    .Cards img{
+        width: 400px;
+    }
+    .Cards p{
+        width: 400px;
+    }
+}
